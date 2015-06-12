@@ -9,7 +9,7 @@
 		<!-- Commentaires -->
 		<!-- <a href=" "> contenu du lien</a> -->
 		<header class="main-header">
-			<h1 class="main-title">Bienvenue sur mon CV</h1>
+			<h1 class="main-title" id="toto">Bienvenue sur mon CV</h1>
 			<nav class="main-nav">
 				<ul>
 					<li><a href="index.htm" title="" class="big">Accueil</a></li>
@@ -73,5 +73,47 @@
 				<span class="city">44000 Nantes</span>
 			</address>
 		</footer>
+
+		<script>
+			"use strict";
+			
+			/*var element = document.createElement('h1');
+
+			element.innerHTML = "bonjour";
+
+			document.body.appendChild(element);*/
+
+			var element = document.getElementById("toto");
+			element.innerHTML = "Bienvenue sur mon CV !";
+			element.style.color = "yellow";
+			element.style.backgroundColor = "red";
+
+			var elements = document.getElementsByClassName("section-title");
+			console.log(elements);
+
+			elements = document.getElementsByTagName("h3");
+			console.log(elements);
+
+			//elements.forEach(function(element){
+				// ne fonctionne pas car elements n'est pas un array mais un nodeList
+			//});
+
+			[].forEach.call(elements, function(element){
+				element.style.borderLeft = "5px solid red";
+			});
+			//Array.prototype.forEach.call marche aussi et est même mieux puisqu'on ne crée pas de tableau
+
+			var mainTitles = document.getElementsByClassName("main-title");
+			[].forEach.call(mainTitles, function(elem){
+				elem.addEventListener("click", function (){
+					elem.style.color = "blue";
+					elem.classList.remove("main-title");
+				});
+			});
+
+			document.querySelector("h1.main-title"); //récupère le premier élément correspondant à la description donnée
+			document.querySelectorAll("h1.main-title"); //récupère tous les éléments correspondant
+
+		</script>
 	</body>
 </html>

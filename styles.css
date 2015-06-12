@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6{
 	transition: all 1s;
 }
 .portrait:hover{
-	transform: translateX(500px) rotate(360deg);
+	/*transform: translateX(500px) rotate(360deg);*/
 }
 
 .main-nav a{
