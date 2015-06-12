@@ -1,0 +1,89 @@
+html{
+	background-color: #eee;
+	/*background-color: rgb(255, 120, 0)*/
+	box-sizing: border-box;
+}
+
+*, *:before, *:after{
+	box-sizing: inherit;
+}
+
+body{
+	font-family: Helvetica, Arial, sans-serif;
+	color: #444;
+	max-width: 780px;
+	background: #fff;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+a{
+	color: darkred;
+}
+
+a:visited{
+	color: purple;
+}
+
+a:focus{
+	color: red;
+}
+
+a:hover{
+	color: yellow;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+
+/* Element desig */
+
+.main-header{
+	border-bottom : 10px #333 solid;
+	background-color: #eee;
+	padding: 20px;
+}
+.portrait{
+	width: 199px;
+	height: 199px;
+	border-radius: 50%;
+	overflow: hidden;
+	transition: all 1s;
+}
+.portrait:hover{
+	transform: translateX(500px) rotate(360deg);
+}
+
+.main-nav a{
+	text-decoration: none
+}
+.main-nav ul{
+	/* surcharge des styles prédéfinis par le navigateur */
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+.main-nav li{
+	display: inline-block;
+	background-color: #fff;
+	padding: 10px;
+}
+.main-nav li:hover{
+	background-color: #444;
+}
+.main-nav li:before{
+	content: "\27A1";
+	font-size: 15px;
+	display: inline-block;
+	margin-right: 5px;
+}
+.main-nav li:hover:before{
+	color: yellow;
+}
+
+.contact .main-header{
+	background-color: red;
+}
